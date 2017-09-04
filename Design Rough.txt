@@ -1,0 +1,119 @@
+User selects X Symptoms
+Iterate through Supplement Array, summing value of targeted symptoms, creating a new temp 'results' array with the Supplement Name and the sum value.
+Order list by Sum Value
+Cut list down to top three
+Display resutls accordingly
+
+array const Symptoms [Template - only one in entire app]
+[
+["Energy", "[link to picture]"],
+["Digestion", "[link to picture]"],
+["Mood", "[link to picture]"],
+["Headaches", "[link to picture]"],
+["Foggy Brain", "[link to picture]"],
+["Bone Problems", "[link to picture]"],
+["Allergies", "[link to picture]"],
+["Sugar Cravings", "[link to picture]"],
+["Heart Trouble", "[link to picture]"],
+["Recurring Flu / Colds", "[link to picture]"],
+["Romantic Health", "[link to picture]"],
+["General Nutrition", "[link to picture]"],
+]
+
+Class User [Multiple per App, stored in LocalStorage]
+{
+name: , "",
+selectedSymptoms, ["","",""],
+returnedSupplements, [{},{},{}],
+price, int [populated upon ReturnedSupplements]
+}
+
+var currentUser = new User();
+
+array const supplementIndex [Another Template - only one in entire app
+[
+{Supplement1},
+{Supplement2},
+...
+{SupplementN}
+]
+
+
+Class Supplement ( x 24) [Put in separate document, initialize supplementIndex at the top, array.push each to supplementIndex]
+{ 
+name
+link
+picture
+description
+price
+symptoms
+  {
+  "Energy" : int [effectiveness rating],
+  "Digestion" : ,
+  "Mood" : ,
+  "Headaches" : ,
+  "Foggy Brain" : ,
+  "Bone Problems" : ,
+  "Allergies" : ,
+  "Sugar Cravings" : ,
+  "Heart Trouble" : ,
+  "Recurring Flu / Colds" : ,
+  "Romantic Health" : ,
+  "General Nutrition" : 
+  }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+WORKFLOW
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Landing Page: The Diagnosis Machine | Select your symptoms from a list of common afflictions, and we will provide you a cohort of three affordable, effective supplements best-tailored to your needs!
+
+If you have an account, please enter your existing username and password to resume.
+If you DO NOT have an account, please enter a new username and password to begin.
+
+[username text field]
+[password text field]
+New User : [Sign Up (button)]
+Current User : [Sign In (button)]
+
+[User enters their information and selects a button. Blank fields returns alert. 1a) Sign Up: Already-existing user returns error. 1b) Sign Up: New user creates new user object with provided name and password, installs into currentUser field, and proceeds to 'symtoms' page. 2a) Sign In: Incorrect username and password resturns Alert. 2b) Correct username and password writes existing user into currentUser object, proceeds to 'symptoms' page.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Symptoms Page: Please select your (three) most concerning symptoms from the following list:
+
+(G R I D)
+
+[Pageload iterates over "symptom" grid, renders 4x3 grid, tiles with pictures of symptoms, symptom name with backboard across bottom]
+[User clicks on three symptoms. Each is added to user's 'user.selectedSymptoms' grid in turn. Selected symptoms are rendered in their own box somewhere on the page]
+
+'Calculate Optimum Supplements! (button)'
+
+[either: button activates when three supplements are enabled | incorrect number of supplements returns alert. When button is pressed, 'Main Processing" is done; user.selectedSymptoms is compared against supplementIndex as described below, and an array of three Supplement objects are returned into the 'user' object. Site proceeds to 'Results' page.]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Design Specific - Algorith for producing 'returnedSupplements'.
+
+  Create a temporary array called 'suppSuggentTemp'. 
+  Iterate over each Supplement in the supplementIndex array - within each supplement, sum the 'effectiveness rating' values of the keys matching the three selected symptoms.
+  Within each supplement, take it's supplement.name, and the sum produced in the last step, and add it to suppSuggestTemp[]
+  Once all supplement have been iterated over, sort suppSuggestTemp by the 'effectiveness rating' sum, descending.
+  Clip the array to the top three results.
+  Iterate over the supplements array once again, writing the three supplement objects into the current user's user.suggestedSupplements array, matching suppSuggestTemp.name to supplement.name
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Results Page:
+
+(G R I D)
+
+[Pageload iterates over user's user.returnedSupplements list, rendering a nice fat graphical element (three total) across the page, showing the name, picture, description, and external link of each supplement. Page also displays a 'Total Price' at the top.]
+
+Start Again! (button) [Clears relevant data, proceeds back to the 'symptom' page]
