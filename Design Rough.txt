@@ -1,9 +1,3 @@
-User selects X Symptoms
-Iterate through Supplement Array, summing value of targeted symptoms, creating a new temp 'results' array with the Supplement Name and the sum value.
-Order list by Sum Value
-Cut list down to top three
-Display resutls accordingly
-
 array const Symptoms [Template - only one in entire app]
 [
 ["Energy", "[link to picture]"],
