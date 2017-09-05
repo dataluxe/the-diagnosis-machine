@@ -1,10 +1,17 @@
+/*Universal styles here*/
+
 html, body {
     font-size: 16px;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     height: 100%;
-    background-color: #DDEEFF;
+    /*background-color: #DDEEFF;*/
     margin: 0;
     padding: 0;
+    color: #FFFFFF;
+}
+
+body {
+    background: repeat, url('../images/wild-sea.png'), rgba(256, 256, 256, .3);
 }
 
 a {
@@ -12,6 +19,32 @@ a {
     text-decoration: none;
     text-decoration-style: solid;
 }
+
+#background {
+    background-color: rgba(256, 256, 256, .5);
+    height: 100%;
+}
+
+.heading-big {
+    font-size: 250%;
+    font-weight: bolder;
+    margin: 4px;
+}
+.flavor-text-medium-small {
+    font-size: 113%;
+    font-weight: lighter;
+}
+
+.heading-medium {
+    font-size: 150%;
+    font-weight: 500;
+    margin: 2px;
+}
+.flavor-text-small {
+    font-weight: lighter;
+}
+
+/*shared 'navbar' styles here*/
 
 #navbar {
     /*display: table;
@@ -31,15 +64,20 @@ a {
     text-align: left;
     vertical-align: middle;
 }
+#navbar-left-element > a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
 #navbar-center-element {
     width: 34%;
     text-align: center;
     vertical-align: middle;
 }
-
-#navbar-center-element > a {
-    padding-left: 15px;
-    padding-right: 15px;
+#header-title-tile {
+    font-size: 157%;
+    color: #FFFFCC
 }
 
 #navbar-right-element {
@@ -49,12 +87,40 @@ a {
     text-align: right;
     vertical-align: middle;
 }
-
 #navbar-right-element > b {
     padding-left: 15px;
 }
 
-#header-title-tile {
-    font-size: 145%;
-    color: #FFFFCC
+
+
+/*index.html styles here*/
+
+#greeting-panel {
+    width: 760px;
+    margin: 150px auto;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 9px;
+    padding: 9px;
+    text-align: center;
 }
+
+#sign-in-table {
+    width: 100%;
+    margin: auto;
+}
+
+.sign-in-cell {
+    width: 50%;
+    margin: 15px;
+    background: rgba(256, 256, 256, .2);
+    border-radius: 9px;
+    padding: 6px;
+}
+
+
+
+/*symptoms.html styles here*/
+
+/*supplements.html styles here*/
+
+/*about.html styles here*/

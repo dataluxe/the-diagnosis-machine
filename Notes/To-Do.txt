@@ -1,5 +1,5 @@
-Review separations and data-handoff between pages.
-Review other projects' Page transitions.
+-Review separations and data-handoff between pages.
+-Review other projects' Page transitions.
 
 Rough-in Pages HTML and CSS off of other projects
 
