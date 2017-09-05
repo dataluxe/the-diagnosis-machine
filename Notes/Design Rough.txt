@@ -71,7 +71,7 @@ WORKFLOW
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Landing Page: The Diagnosis Machine | Select your symptoms from a list of common afflictions, and we will provide you a cohort of three affordable, effective supplements best-tailored to your needs!
+Landing Page: The Diagnosis Machine | Select your symptoms from a list of common health afflictions, and we will provide you a cohort of three affordable, effective supplements best-tailored to your needs!
 
 If you have an account, please enter your existing username and password to resume.
 If you DO NOT have an account, please enter a new username and password to begin.
@@ -79,7 +79,7 @@ If you DO NOT have an account, please enter a new username and password to begin
 [username text field]
 [password text field]
 New User : [Sign Up (button)]
-Current User : [Sign In (button)]
+Existing User : [Sign In (button)]
 
 [User enters their information and selects a button. Blank fields returns alert. 1a) Sign Up: Already-existing user returns error. 1b) Sign Up: New user creates new user object with provided name and password, installs into currentUser field, and proceeds to 'symtoms' page. 2a) Sign In: Incorrect username and password resturns Alert. 2b) Correct username and password writes existing user into currentUser object, proceeds to 'symptoms' page.
 

@@ -1,0 +1,73 @@
+Review separations and data-handoff between pages.
+Review other projects' Page transitions.
+
+Rough-in Pages HTML and CSS off of other projects
+
+Rough-in forms, etc.
+
+Begin constructing JS elements and required assets page by page.
+
+
+
+Ideas and "Other Bits"
+
+Regex validate username and password for easier checking later in the program.
+
+Header: "Diagnosis | About Us | Contact -> [Right Side Once Logged In] Username | Restart | Sign Out "
+
+Diagnosis: 'Symptoms Page' for the Main diagnoses process. Starts with 'select your top three symptoms' prompt.
+About us: Page: Me w. explanation
+Contact: Fake Google Map, Contact Info, Addreess, Comment Form
+
+Username: Static text currentuser.username.
+Restart: clears supplement suggestions, symptoms etc. and returns to 'symptom' page.
+Sign Out: Saves user data and nulls out all pertinent data structures and currentUser, and returns to 'start page'
+
+
+localstorage retrieval, incorrect-navigation-referral etc. BEFORE LOAD.
+
+Event Handler binding, DOM maniputaion etc. AFTER load.
+
+
+*******Console.log unique message every function, branch.
+
+
+
+
+Full Page List:
+
+--Landing
+From: First Page Visit, "New Diagnosis button."
+
+User will always be blank when this page is visited through proper channels.
+If directly visited via url navigation, user will be deleted: null out currentUser first thing is JS.
+
+Initialization page: All primary constant data structures will be established here and committed to local storage, if not already created.
+
+Sign-in buttons leads To: Symptoms
+
+
+--Symptoms [Header]
+User will (must) always be populated here if referred through proper routes, either created and passed from the sign-in/sign-up page in Landing, or retrieved from Local storage if referred from other pages.
+If directly visited from page navigation, user must exist. If not, page will automatically refer to the Landing Page.
+
+Retrieve username from currentUser, display in header.
+
+Retrieve symptoms from localStorage.
+
+Leads To: Supplements
+
+--Supplements
+User will (must) also always be populated here if referred through proper routes, either passed from the Symptom page, or retrieved from Local storage if referred from other pages.
+If directly visited from page navigation, user must exist. If not, page will automatically refer to the Landing Page.
+
+Retrieve username from currentUser, display in header.
+Processing crunches to produce Suggestions upon submission of 'Symptoms', stores in local, page referrs.... then, JS in 'Supplements' retrieve currentUser, display all supplement suggestions within, $$$ total, etc.
+Leads To: None
+
+
+
+--About Us [Header]
+Retrieve username from currentUser, display in header.
+If No User (direct navigation, or navigation from Landing page) function will display nothing.
+Leads To: None
