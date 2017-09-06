@@ -11,6 +11,8 @@ Begin constructing JS elements and required assets page by page.
 
 Ideas and "Other Bits"
 
+Make relatively positioned footer, use this as bottom extremity of page to stretch the 'masking layer' down to.
+
 Regex validate username and password for easier checking later in the program.
 
 Header: "Diagnosis | About Us | Contact -> [Right Side Once Logged In] Username | Restart | Sign Out "

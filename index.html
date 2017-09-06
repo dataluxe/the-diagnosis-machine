@@ -12,74 +12,72 @@
 <div id="background"> <!-- Shitty workaround - CSS3 can't apply alpha to a bg image, so I have to desaturate using a div above the bg>
 
 <!-- This is the Navbar. Turns out using a Table makes it really clean and simple, and avoids a lot of alignment pain vs. using flow.-->
-<table id="navbar">
+    <table id="navbar">
 
-    <tr>
-
-        <!--Left-Aligned Elements-->
-        <td id="navbar-left-element">
-            <a href="index.html">Home</a>
-            <a href="symptoms.html">Symptoms</a>
-            <a href="about.html">About Us</a>
-        </td>
-
-        <!--Center Elements-->
-        <td id="navbar-center-element">
-            <b id = "header-title-tile">The Diagnosis Machine</b>
-        </td>
-
-        <!--Right-Aligned Elements-->
-        <td id="navbar-right-element">
-            <b id="navbar-username">Username</b>
-            <b id="navbar-signout">Sign Out</b>
-        </td>
-
-    </tr>
-
-</table>
-<!-- Navbar End-->
-
-<div id="greeting-panel">
-
-    <b class="heading-big">Welcome!</b>
-    <hr>
-    <p class="flavor-text-medium-small">It's no secret that good health is absolutely fundamental to living a happy and fulfilling life, particularly in our taxing modern world.</p>
-    <p class="flavor-text-medium-small">Why, then, does the quest toward good health seem to be an almost universal struggle?</p>
-    <p class="heading-medium">Our app, The Diagnosis Machine, is here to sweep aside all the confusion!</p>
-    <p class="flavor-text-medium-small">Select your symptoms from a list of common health afflictions, and we will provide you a cohort of three affordable, effective supplements best-tailored to your needs!</p>
-    <hr>
-    <p class="flavor-text-small">If you have an account, please enter your existing username and password to resume.</p>
-    <p class="flavor-text-small">If you DO NOT have an account, please enter a new username and password to begin.</p>
-    <hr>
-
-    <table id="sign-in-table">
         <tr>
-            <td class="sign-in-cell">
-                <b>Username</b>
-                <input title="username" type="text" id="username-field"><br>
-                <b>Existing Users</b>
-                <button id="sign-in-button">Sign In</button>
+
+            <!--Left-Aligned Elements-->
+            <td id="navbar-left-element">
+                <a href="index.html">Home</a>
+                <a href="symptoms.html">Symptoms</a>
+                <a href="about.html">About Us</a>
             </td>
-            <td class="sign-in-cell">
-                <b>Password</b>
-                <input title="password" type="text" id="password-field"><br>
-                <b>New Users</b>
-                <button id="sign-up-button">Sign Up</button>
+
+            <!--Center Elements-->
+            <td id="navbar-center-element">
+                <b id = "header-title-tile">The Diagnosis Machine</b>
             </td>
+
+            <!--Right-Aligned Elements-->
+            <td id="navbar-right-element">
+                <b id="navbar-username">Username</b>
+                <b id="navbar-signout">Sign Out</b>
+            </td>
+
         </tr>
 
     </table>
+    <!-- Navbar End-->
 
-</div>
+    <div id="greeting-panel">
 
-</div> <!-- end background div>
+        <b class="heading-big">Welcome!</b>
+        <hr>
+        <p class="flavor-text-medium-small">It's no secret that good health is absolutely fundamental to living a happy and fulfilling life, particularly in our taxing modern world.</p>
+        <p class="flavor-text-medium-small">Why, then, does the quest toward good health seem to be an almost universal struggle?</p>
+        <p class="heading-medium">Our app, The Diagnosis Machine, is here to sweep aside all the confusion!</p>
+        <p class="flavor-text-medium-small">Select your symptoms from a list of common health afflictions, and we will provide you a cohort of three affordable, effective supplements best-tailored to your needs!</p>
+        <hr>
+        <p class="flavor-text-small">If you have an account, please enter your existing username and password to resume.</p>
+        <p class="flavor-text-small">If you DO NOT have an account, please enter a new username and password to begin.</p>
+        <hr>
+
+        <table id="sign-in-table">
+            <tr>
+                <td class="sign-in-cell">
+                    <b>Username</b>
+                    <input title="username" type="text" id="username-field"><br>
+                    <b>Existing Users</b>
+                    <button id="sign-in-button">Sign In</button>
+                </td>
+                <td class="sign-in-cell">
+                    <b>Password</b>
+                    <input title="password" type="text" id="password-field"><br>
+                    <b>New Users</b>
+                    <button id="sign-up-button">Sign Up</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div id="footer">
+        &copy; - Copyright 2017 - DataluxE Web Productions
+    </div>
+
+</div> <!-- end background div-->
 
 </body>
 </html>
-
-.heading-big
-.flavor-text-medium-small
-.heading-medium
-.flavor-text-small
-#sign-in-table
-#username-sign-in-cell
