@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About - The Diagnosis Machine</title>
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./css/combinedCss.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+
+<div id="background"> <!-- Shitty workaround - CSS3 can't apply alpha to a bg image, so I have to desaturate using a div above the bg>
+
+<!-- This is the Navbar. Turns out using a Table makes it really clean and simple, and avoids a lot of alignment pain vs. using flow.-->
+    <table id="navbar">
+
+        <tr>
+
+            <!--Left-Aligned Elements-->
+            <td id="navbar-left-element">
+                <a href="index.html">Home</a>
+                <a href="symptoms.html">Symptoms</a>
+                <a href="about.html">About Us</a>
+            </td>
+
+            <!--Center Elements-->
+            <td id="navbar-center-element">
+                <b id = "header-title-tile">The Diagnosis Machine</b>
+            </td>
+
+            <!--Right-Aligned Elements-->
+            <td id="navbar-right-element">
+                <b id="navbar-username">Username</b>
+                <b id="navbar-signout">Sign Out</b>
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+    <div id="about-panel">
+        <div id="friendly-about">
+            <p class="heading-big" id="about-title">About This Project</p>
+            <img src="./images/profile-picture.png"/>
+            <b class="flavor-text-medium-small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas hendrerit augue, nec euismod erat tincidunt et. Cras quis porttitor augue, vel placerat est. Curabitur enim ligula, volutpat at fringilla ac, venenatis a justo. Nunc eleifend id leo vel tempus. Donec id diam malesuada, feugiat dolor ac, rhoncus turpis. Praesent et est dictum, lobortis tortor rhoncus, feugiat justo. In imperdiet, orci nec scelerisque fringilla, enim ligula imperdiet augue, et condimentum elit tellus vitae urna.
+
+                Praesent pellentesque nibh in auctor porta. Aenean ut ante pharetra nisi imperdiet pulvinar sit amet non lacus. Aliquam volutpat rhoncus purus, id fringilla augue pulvinar id. Pellentesque rutrum, elit nec elementum efficitur, risus dolor rutrum tellus, tincidunt consequat quam eros et lacus. Vivamus ac urna sit amet orci posuere mattis. Integer convallis eros massa, ac porttitor erat elementum tristique. Etiam venenatis semper dui, ut efficitur lectus vestibulum sed. Suspendisse accumsan tincidunt elit at mattis. Pellentesque vel sollicitudin elit, vitae convallis neque. Aliquam ligula sem, mattis eget turpis eget, aliquam posuere massa. Proin vehicula elit ante. Phasellus eu suscipit nisi, vel facilisis elit. Donec eleifend tellus quis dui iaculis iaculis.
+
+                Cras aliquam rutrum purus hendrerit pharetra. Sed ac urna luctus mauris consectetur ultricies quis ut sapien. Phasellus tincidunt sed massa eget luctus. Nunc ut placerat diam, et tempor enim. Phasellus non lacinia nunc. In hac habitasse platea dictumst. Sed in nisi varius, eleifend mauris sed, condimentum enim. In vel elementum purus. Proin sagittis est non vestibulum rhoncus. Quisque non purus nunc. Aliquam tempor ligula a orci tristique ullamcorper. Ut aliquam maximus lectus. Aenean vitae euismod eros. Pellentesque in pretium dui. Fusce posuere quis massa vitae blandit.
+            </b>
+        </div>
+
+        <!-- This div will be initially hidden - it can be toggled with a button to replace the 'Friendly' about with a disclaimer.
+
+        <div id="disclaimer-about">
+            <b class="heading-big">About This Project</b>
+            <img src="./images/copyright.jpg">
+            <p class="flavor-text-medium-small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas hendrerit augue, nec euismod erat tincidunt et. Cras quis porttitor augue, vel placerat est. Curabitur enim ligula, volutpat at fringilla ac, venenatis a justo. Nunc eleifend id leo vel tempus. Donec id diam malesuada, feugiat dolor ac, rhoncus turpis. Praesent et est dictum, lobortis tortor rhoncus, feugiat justo. In imperdiet, orci nec scelerisque fringilla, enim ligula imperdiet augue, et condimentum elit tellus vitae urna.
+
+                Praesent pellentesque nibh in auctor porta. Aenean ut ante pharetra nisi imperdiet pulvinar sit amet non lacus. Aliquam volutpat rhoncus purus, id fringilla augue pulvinar id. Pellentesque rutrum, elit nec elementum efficitur, risus dolor rutrum tellus, tincidunt consequat quam eros et lacus. Vivamus ac urna sit amet orci posuere mattis. Integer convallis eros massa, ac porttitor erat elementum tristique. Etiam venenatis semper dui, ut efficitur lectus vestibulum sed. Suspendisse accumsan tincidunt elit at mattis. Pellentesque vel sollicitudin elit, vitae convallis neque. Aliquam ligula sem, mattis eget turpis eget, aliquam posuere massa. Proin vehicula elit ante. Phasellus eu suscipit nisi, vel facilisis elit. Donec eleifend tellus quis dui iaculis iaculis.
+
+                Cras aliquam rutrum purus hendrerit pharetra. Sed ac urna luctus mauris consectetur ultricies quis ut sapien. Phasellus tincidunt sed massa eget luctus. Nunc ut placerat diam, et tempor enim. Phasellus non lacinia nunc. In hac habitasse platea dictumst. Sed in nisi varius, eleifend mauris sed, condimentum enim. In vel elementum purus. Proin sagittis est non vestibulum rhoncus. Quisque non purus nunc. Aliquam tempor ligula a orci tristique ullamcorper. Ut aliquam maximus lectus. Aenean vitae euismod eros. Pellentesque in pretium dui. Fusce posuere quis massa vitae blandit.
+            </p>
+        </div>
+
+        -->
+
+    </div>
+
+</div>
+
+<!--footer here. Test if it works, and if it does, add to the standard page layout-->
 
 </body>
 </html>
