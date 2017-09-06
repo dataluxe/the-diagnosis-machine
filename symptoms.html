@@ -2,9 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Symptoms - The Diagnosis Machine</title>
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./css/combinedCss.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+
+<div id="background"> <!-- Shitty workaround - CSS3 can't apply alpha to a bg image, so I have to desaturate using a div above the bg>
+
+    <!--Navbar-->
+    <table id="navbar">
+
+        <tr>
+
+            <!--Left-Aligned Elements-->
+            <td id="navbar-left-element">
+                <a href="index.html">Home</a>
+                <a href="symptoms.html">Symptoms</a>
+                <a href="about.html">About Us</a>
+            </td>
+
+            <!--Center Elements-->
+            <td id="navbar-center-element">
+                <b id = "header-title-tile">The Diagnosis Machine</b>
+            </td>
+
+            <!--Right-Aligned Elements-->
+            <td id="navbar-right-element">
+                <b id="navbar-username">Username</b>
+                <b id="navbar-signout">Sign Out</b>
+            </td>
+
+        </tr>
+
+    </table>
+    <!-- Navbar End-->
+
+    <div id="symptom-panel">
+
+        <p class="heading-big">Symptoms</p>
+
+        <b class="flavor-text-medium-small">Please select your top three symptoms from the following list.</b>
+
+         <table id="symptom-grid">
+
+            <tr>
+                <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                    <div><b class="heading-medium">Symptom</b></div>
+                </td>
+
+                <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                    <div><b class="heading-medium">Symptom</b></div>
+                </td>
+
+                <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                    <div><b class="heading-medium">Symptom</b></div>
+                </td>
+
+                <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                    <div><b class="heading-medium">Symptom</b></div>
+                </td>
+            </tr>
+
+             <tr>
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+             </tr>
+
+             <tr>
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+
+                 <td style="background: url('./images/symptom-test.png') no-repeat" class="symptom-cell">
+                     <div><b class="heading-medium">Symptom</b></div>
+                 </td>
+             </tr>
+
+        </table>
+
+    </div>
+
+</div> <!-- end background div-->
 
 </body>
 </html>

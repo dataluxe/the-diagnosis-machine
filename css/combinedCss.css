@@ -3,7 +3,6 @@
 html, body {
     font-size: 16px;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    height: 100%;
     /*background-color: #DDEEFF;*/
     margin: 0;
     padding: 0;
@@ -120,6 +119,42 @@ a {
 
 
 /*symptoms.html styles here*/
+
+#symptom-panel {
+    width: 960px;
+    margin: 50px auto;
+    padding: 20px 0 20px;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 9px;
+    text-align: center;
+}
+
+#symptom-grid {
+    margin: 30px auto 0;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.symptom-cell {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    vertical-align: bottom;
+    border: 6px solid #000000;
+    border-image-width: 0;
+    padding: 0;
+}
+
+.symptom-cell > div {
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    top: 160px;
+    height: 40px;
+    width: 200px;
+    overflow: hidden;
+}
 
 /*supplements.html styles here*/
 
