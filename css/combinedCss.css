@@ -188,33 +188,29 @@ a {
 
 .supplement-panel {
     width: 27%;
+    height: fit-content;
     position: relative;
     max-height: 840px;
     background-color: rgba(0, 0, 0, .3);
     border-radius: 9px;
 }
 
-.supplement-panel :nth-child(1) {
-    margin: 0;
-    padding: 15px;
-    text-align: center;
-}
-.supplement-panel :nth-child(3) {
-    text-align: justify;
-    padding: 20px;
-}
-.supplement-panel :nth-child(4) {
-    display: block;
-    margin: auto;
-    text-align: center;
-}
-.supplement-panel :nth-child(5) {
-    display: block;
-    margin: auto;
+.supp-heading {
+    margin: .3em;
     text-align: center;
 }
 
-.supplement-image {
+.supp-desc {
+    margin: .75em;
+    text-align: justify;
+}
+.supp-info {
+    display: block;
+    margin: .5em auto;
+    text-align: center;
+}
+
+.supp-image {
     width: 70%;
     height: auto;
     display: block;

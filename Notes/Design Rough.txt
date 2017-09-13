@@ -4,7 +4,7 @@ Order list by Sum Value
 Cut list down to top three
 Display resutls accordingly
 
-array const Symptoms [Template - only one in entire app]
+array const symptoms [Template - only one in entire app]
 [
 ["Energy", "[link to picture]"],
 ["Digestion", "[link to picture]"],
@@ -25,12 +25,12 @@ Class User [Multiple per App, stored in LocalStorage]
 name: , "",
 selectedSymptoms, ["","",""],
 returnedSupplements, [{},{},{}],
-price, int [populated upon ReturnedSupplements]
+checkoutTotal, decimal
 }
 
 var currentUser = new User();
 
-array const supplementIndex [Another Template - only one in entire app
+array const supplementIndex [Another Template - only one in entire app]
 [
 {Supplement1},
 {Supplement2},
@@ -39,7 +39,7 @@ array const supplementIndex [Another Template - only one in entire app
 ]
 
 
-Class Supplement ( x 24) [Put in separate document, initialize supplementIndex at the top, array.push each to supplementIndex]
+Class Supplement ( x 24) [Put in separate document, initialize supplementIndex at the top in index.html, array.push each to supplementIndex]
 { 
 name
 link
@@ -63,6 +63,8 @@ symptoms
   }
 }
 
+(?) CheckHealth(): [Function at top of page which valid-checks all variables and displays a few messages indicating status]
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -70,6 +72,15 @@ WORKFLOW
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[//
+Class User - *initialize and commit to localStorage*
+class Supplement - *initialize and commit to localStorage*
+array symptoms - *initialize and commit to localStorage*
+supplementIndex - *initialize and commit to localStorage*
+currentUser = localStorage.currentUser | new User() - *retrieve / create*
+//]
+
 
 Landing Page: The Diagnosis Machine | Select your symptoms from a list of common health afflictions, and we will provide you a cohort of three affordable, effective supplements best-tailored to your needs!
 
@@ -81,9 +92,22 @@ If you DO NOT have an account, please enter a new username and password to begin
 New User : [Sign Up (button)]
 Existing User : [Sign In (button)]
 
-[User enters their information and selects a button. Blank fields returns alert. 1a) Sign Up: Already-existing user returns error. 1b) Sign Up: New user creates new user object with provided name and password, installs into currentUser field, and proceeds to 'symtoms' page. 2a) Sign In: Incorrect username and password resturns Alert. 2b) Correct username and password writes existing user into currentUser object, proceeds to 'symptoms' page.
+[//
+User enters their information and selects a button. Blank fields returns alert.
+1a) Sign Up: Already-existing user returns alert, clears fields.
+1b) Sign Up: New user creates new user object with provided name and password, installs into currentUser object, and proceeds to 'symptoms' page.
+2a) Sign In: Existing username but incorrect password returns Alert.
+2b) Sign In: Existing username with correct password writes existing user in localStorage into currentUser object, proceeds to 'symptoms' page.
+//]
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[//
+All CONSTANTS must exist as above.
+currentUser MUST exist: Name, Password must be populated. Other fields must exist, but inner information in irrelevant.
+Null or malpopulated currentUser will log critical error, redirect to Home page.
+//]
 
 Symptoms Page: Please select your (three) most concerning symptoms from the following list:
 
@@ -94,7 +118,29 @@ Symptoms Page: Please select your (three) most concerning symptoms from the foll
 
 'Calculate Optimum Supplements! (button)'
 
-[either: button activates when three supplements are enabled | incorrect number of supplements returns alert. When button is pressed, 'Main Processing" is done; user.selectedSymptoms is compared against supplementIndex as described below, and an array of three Supplement objects are returned into the 'user' object. Site proceeds to 'Results' page.]
+[//
+
+User clicks symptoms tiles to select the tile's symptom.
+Selected tiles change color to indicate that they're selected.
+Selected tiles clicked again will de-select them.
+If three tiles are 'selected', further attempts to select a tile will fail.
+Whilst three tiles are selected, the 'Proceed' button will light up.
+
+When the proceed button is pressed, the heart of TDM's processing will occur:
+- Place the "Symptom" page's tiles' html "Symptom Name" headings of the selected tiles are in the currentUser.selectedSymptoms string array.
+- (Check) Check all three strings in currentUser.selectedSymptoms against the first value in each cell of the 'Symptom' array. Any failure here should be logged, and the datasets repaired.
+- Create a temporary array called 'suppSuggentTemp'.
+- Iterate over each Supplement in the supplementIndex array - within each supplement:
+  > Sum the 'effectiveness rating' values of the keys matching the three selected symptoms in currentUser.selectedSymptoms.
+  > Take the supplement.name, and the sum produced in the last step, and push those two values as an array pair to suppSuggestTemp[]
+- Once the iteration in the past step is complete, sort suppSuggestTemp by the 'effectiveness rating' sum, descending.
+- Clip the array to the top three results. Ties may be selected arbitrarily.
+- Iterate over the supplements array once again, write the three supplement objects into the current user's user.returnedSupplements array, matching suppSuggestTemp.name to supplement.name
+- Iterate over the user.ReturnedSupplements array, summing the supplements objects' price, and writing that value to user.checkoutTotal.
+
+Site proceeds to 'Results' page.
+
+//]
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -109,6 +155,11 @@ Design Specific - Algorith for producing 'returnedSupplements'.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+[//
+All CONSTANTS must exist as above.
+currentUser MUST exist: Name, Password, returnedSupplements, checkoutTotal must be populated. Other fields must exist, but inner information in irrelevant.
+Null or malpopulated currentUser will log critical error, redirect to Home page.
+//]
 
 Results Page:
 
@@ -116,4 +167,4 @@ Results Page:
 
 [Pageload iterates over user's user.returnedSupplements list, rendering a nice fat graphical element (three total) across the page, showing the name, picture, description, and external link of each supplement. Page also displays a 'Total Price' at the top.]
 
-Start Again! (button) [Clears relevant data, proceeds back to the 'symptom' page]
+Try other symptoms! (button) [Clears relevant data, proceeds back to the 'symptom' page]
