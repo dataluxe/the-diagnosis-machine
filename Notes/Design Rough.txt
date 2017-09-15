@@ -118,16 +118,17 @@ currentUser - retrieve from localStorage
  Null or malpopulated currentUser will log critical error, redirect to Home page.
 //]
 
-Username = currentUser.name
+[ONLOAD] Username = currentUser.name
 Clicking the "Sign Out" button will save currentUser into userIndex array, return to index.html.
 
 [//
 
-User clicks symptoms tiles to select the tile's symptom.
-Selected tiles change color to indicate that they're selected.
-Selected tiles clicked again will de-select them.
-If three tiles are 'selected', further attempts to select a tile will fail.
-Whilst three tiles are selected, the 'Proceed' button will be lit-up.
+[ONLOAD - event]User clicks symptoms tiles to select the tile's symptom.
+  Selected tiles change color to indicate that they're selected.
+  Selected tiles clicked again will de-select them.
+  If three tiles are 'selected', further attempts to select a tile will fail.
+
+  Whilst three tiles are selected, the 'Proceed' button will be lit-up.
 
 When the proceed button is pressed, the heart of TDM's processing will occur:
 - Place the "Symptom" page's tiles' html "Symptom Name" headings of the selected tiles are in the currentUser.selectedSymptoms string array.
