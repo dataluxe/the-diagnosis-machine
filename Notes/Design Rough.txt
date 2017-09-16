@@ -89,9 +89,6 @@ WORKFLOW
 [//
 Class User - *initialize*
 userIndex = localStorage.userIndex | [];
-Class Supplement - *initialize*
-supplementIndex = *populate with bulk code block, write to localStorage*
-symptomIndex = *definition, write to localStorage*
 currentUser = null;
 //]
 
