@@ -1,18 +1,18 @@
 /* SYMPTOMS */
 
 const symptomIndex = [
-    ["Energy", "../images/symptoms/energy.png"],
-    ["Digestion", "../images/symptoms/digestion.png"],
-    ["Mood", "../images/symptoms/mood.png"],
-    ["Headaches", "../images/symptoms/headaches.png"],
-    ["Foggy Brain", "../images/symptoms/foggybrain.png"],
-    ["Bone Problems", "../images/symptoms/boneproblems.png"],
-    ["Allergies", "../images/symptoms/allergies.png"],
-    ["Sugar Cravings", "../images/symptoms/sugercravings.png"],
-    ["Heart Trouble", "../images/symptoms/hearttrouble.png"],
-    ["Recurring Flu / Colds", "../images/symptoms/recurringflu.png"],
-    ["Romantic Health", "../images/symptoms/romantichealth.png"],
-    ["General Nutrition", "../images/symptoms/generalnutrition.png"]
+    ["Energy", "./images/symptoms/energy.png"],
+    ["Digestion", "./images/symptoms/digestion.png"],
+    ["Mood", "./images/symptoms/mood.png"],
+    ["Headaches", "./images/symptoms/headaches.png"],
+    ["Foggy Brain", "./images/symptoms/foggybrain.png"],
+    ["Bone Problems", "./images/symptoms/boneproblems.png"],
+    ["Allergies", "./images/symptoms/allergies.png"],
+    ["Sugar Cravings", "./images/symptoms/sugarcravings.png"],
+    ["Heart Trouble", "./images/symptoms/hearttrouble.png"],
+    ["Recurring Colds", "./images/symptoms/recurringcolds.png"],
+    ["Romantic Health", "./images/symptoms/romantichealth.png"],
+    ["General Nutrition", "./images/symptoms/generalnutrition.png"]
 ];
 
 /* SUPPLEMENTS */
@@ -44,7 +44,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 2,
         "Sugar Cravings" : 2,
         "Heart Trouble" : 2,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition" : 4
     }
@@ -66,7 +66,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 1,
+        "Recurring Colds" : 1,
         "Romantic Health" : 3,
         "General Nutrition" : 1
     }
@@ -88,7 +88,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 1,
         "Sugar Cravings" : 1,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition" : 1
     }
@@ -111,7 +111,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 5,
         "Sugar Cravings" : 3,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 1,
+        "Recurring Colds" : 1,
         "Romantic Health" : 1,
         "General Nutrition" : 0
     }
@@ -134,7 +134,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 2,
         "General Nutrition": 0
     }
@@ -157,7 +157,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 4,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 1,
         "General Nutrition": 0
     }
@@ -180,7 +180,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 1,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 2,
-        "Recurring Flu / Colds" : 6,
+        "Recurring Colds" : 6,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -203,7 +203,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 2,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 3,
+        "Recurring Colds" : 3,
         "Romantic Health" : 2,
         "General Nutrition": 0
     }
@@ -226,7 +226,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -249,7 +249,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 1,
         "Heart Trouble" : 4,
-        "Recurring Flu / Colds" : 2,
+        "Recurring Colds" : 2,
         "Romantic Health" : 2,
         "General Nutrition": 5
     }
@@ -272,7 +272,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition": 1
     }
@@ -295,7 +295,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 3,
         "Sugar Cravings" : 2,
         "Heart Trouble" : 4,
-        "Recurring Flu / Colds" : 1,
+        "Recurring Colds" : 1,
         "Romantic Health" : 1,
         "General Nutrition": 3
     }
@@ -318,7 +318,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 8,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 2,
-        "Recurring Flu / Colds" : 5,
+        "Recurring Colds" : 5,
         "Romantic Health" : 0,
         "General Nutrition": 1
     }
@@ -326,7 +326,7 @@ supplementIndex.push(new Supplement({
 
 
 supplementIndex.push(new Supplement({
-    name : "A.D.P",
+    name : "ADP",
     link : "http://www.bioticsresearch.com/node/1653",
     picture : "./images/supplements/ADP.png",
     description : "A.D.P.® is a proven effective, patented formula. Utilizing micro-emulsification and delayed release technologies, A.D.P.® delivers standardized oil of oregano throughout the digestive tract, where it functions to impact undesirable intestinal organisms.",
@@ -341,7 +341,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 7,
         "Sugar Cravings" : 1,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 4,
+        "Recurring Colds" : 4,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -364,7 +364,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 7,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -387,7 +387,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 6,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -410,7 +410,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 7,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition": 1
     }
@@ -433,7 +433,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 7,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -456,7 +456,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 2,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 7,
+        "Recurring Colds" : 7,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -479,7 +479,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 4,
         "Heart Trouble" : 1,
-        "Recurring Flu / Colds" : 1,
+        "Recurring Colds" : 1,
         "Romantic Health" : 1,
         "General Nutrition": 2
     }
@@ -502,7 +502,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 1,
         "Sugar Cravings" : 1,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 7,
         "General Nutrition": 3
     }
@@ -525,7 +525,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 0,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 8,
         "General Nutrition": 0
     }
@@ -548,7 +548,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 1,
         "Sugar Cravings" : 2,
         "Heart Trouble" : 2,
-        "Recurring Flu / Colds" : 3,
+        "Recurring Colds" : 3,
         "Romantic Health" : 2,
         "General Nutrition": 9
     }
@@ -571,7 +571,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 1,
         "Sugar Cravings" : 5,
         "Heart Trouble" : 1,
-        "Recurring Flu / Colds" : 2,
+        "Recurring Colds" : 2,
         "Romantic Health" : 1,
         "General Nutrition": 8
     }
@@ -594,7 +594,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 1,
         "Sugar Cravings" : 4,
         "Heart Trouble" : 1,
-        "Recurring Flu / Colds" : 1,
+        "Recurring Colds" : 1,
         "Romantic Health" : 1,
         "General Nutrition": 7
     }
@@ -617,7 +617,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 3,
         "Sugar Cravings" : 1,
         "Heart Trouble" : 2,
-        "Recurring Flu / Colds" : 6,
+        "Recurring Colds" : 6,
         "Romantic Health" : 1,
         "General Nutrition": 6
     }
@@ -640,7 +640,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 3,
         "Sugar Cravings" : 3,
         "Heart Trouble" : 1,
-        "Recurring Flu / Colds" : 4,
+        "Recurring Colds" : 4,
         "Romantic Health" : 5,
         "General Nutrition": 5
     }
@@ -663,7 +663,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 4,
         "Sugar Cravings" : 4,
         "Heart Trouble" : 2,
-        "Recurring Flu / Colds" : 4,
+        "Recurring Colds" : 4,
         "Romantic Health" : 3,
         "General Nutrition": 7
     }
@@ -686,7 +686,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 6,
         "Sugar Cravings" : 2,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 1,
+        "Recurring Colds" : 1,
         "Romantic Health" : 0,
         "General Nutrition": 0
     }
@@ -709,7 +709,7 @@ supplementIndex.push(new Supplement({
         "Allergies" : 0,
         "Sugar Cravings" : 1,
         "Heart Trouble" : 0,
-        "Recurring Flu / Colds" : 0,
+        "Recurring Colds" : 0,
         "Romantic Health" : 0,
         "General Nutrition": 3
     }

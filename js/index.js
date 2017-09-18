@@ -2,6 +2,13 @@
  * Created by Main on 9/4/2017.
  */
 
+var userIndex = (localStorage.getItem("userIndex") === null ? [] : JSON.parse(localStorage.getItem("userIndex")));
+var currentUser = [];
+localStorage.removeItem("currentUser");
+var properRegex = /^[A-Za-z0-9]{1,20}$/;
+
+
+
 function User (name, password) {
     this.name = name;
     this.password = password;
@@ -10,13 +17,9 @@ function User (name, password) {
     this.checkoutTotal = null;
 }
 
-var userIndex = (localStorage.getItem("userIndex") === null ? [] : JSON.parse(localStorage.getItem("userIndex")));
-var currentUser;
-var properRegex = /^[A-Za-z0-9]{1,20}$/;
-
 /* Sign Up function here */
 
-const signUp = function() {
+signUp = function() {
     var unField = document.getElementById("username-field");
     var pwField = document.getElementById("password-field");
     var un = unField.value;
@@ -58,7 +61,7 @@ const signUp = function() {
 
 /* Sign In function here */
 
-const signIn = function() {
+signIn = function() {
     var unField = document.getElementById("username-field");
     var pwField = document.getElementById("password-field");
     var un = unField.value;
@@ -85,7 +88,7 @@ const signIn = function() {
     }
 
     else if (regexPass && unCheck) {
-        var currentUser = unCheck;
+        currentUser = unCheck;
         console.log("Existing user found, pulled from localStorage: " + currentUser.name + " | " + currentUser.password + " .");
         //window.location="symptoms.html"
     }

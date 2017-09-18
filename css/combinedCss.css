@@ -170,10 +170,24 @@ a {
     overflow: hidden;
 }
 
+.symptom-selected {
+    border-color: #ff6600;
+
+}
+
 #proceed-button {
     border-radius: 5px;
-    background-color: #ffa500;
+    background-color: #996600;
     vertical-align: middle;
+}
+
+.proceed-enabled {
+    background-color: #ffa500;
+    cursor: pointer;
+}
+
+.proceed-enabled :hover {
+    box-shadow: -3px -3px 3px #FFFFFF;
 }
 
 
