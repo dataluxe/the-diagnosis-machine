@@ -20,7 +20,7 @@ const symptomIndex = [
 function Supplement (inpObj) {
     this.name = inpObj.name; //string
     this.link = inpObj.link; //string - external link
-    this.picture = "./images/supplements/" + inpObj.name + ".jpg"; //image filename must equal supplement name
+    this.picture = inpObj.picture; //image filename must equal supplement name
     this.description = inpObj.description; //string. Good reason to make these in external blocks
     this.price = inpObj.price;
     this.symptoms = inpObj.symptoms;
@@ -650,7 +650,7 @@ supplementIndex.push(new Supplement({
 supplementIndex.push(new Supplement({
     name : "Zinc Complex",
     link : "https://www.buyfoodresearch.com/products/zinc-complex",
-    picture : "",
+    picture : "./images/supplements/ZincComplex.png",
     description : "Zinc Complex is a 100% vegetarian Food supplement that is intended to supply nutrients needed to provide high quality 100% Food organic zinc (as opposed to inorganic mineral salt forms). Zinc serves a catalytic role in enzymes from all six classes of enzymes and more than 300 Zn metalloenzymes have been identified. Zinc deficiency in humans can cause alopecia, impotence, skin problems, immune deficiencies, increased susceptibility to infection/sore throats, night blindness, impaired taste, delayed wound healing, impaired appetite, photophobia (hypersensitivity to light), difficulty in dark adaptation, growth retardation, male infertility (low sperm counts), liver enlargement, and spleen enlargement.",
     price: 18.98,
     symptoms: {
@@ -673,7 +673,7 @@ supplementIndex.push(new Supplement({
 supplementIndex.push(new Supplement({
     name : "IPS",
     link : "http://www.bioticsresearch.com/node/1520",
-    picture : "",
+    picture : "./images/supplements/IPS.png",
     description : "IPS® is a comprehensive Intestinal Permeability Support supplement, consisting of a proprietary blend of botanical compounds and amino acids, along with other synergistic constituents. It provides support for healthy gut function, specifically as it relates to permeability and intestinal mucosa integrity. It includes L-Glutamine, which is the preferred fuel for intestinal tissues, promoting repair and intestinal healing. L-Glutamine has also been demonstrated to be a functional component in the repair of ulcers, as well as a contributor to the healing of leaky gut conditions.",
     price: 57.98,
     symptoms: {
@@ -696,7 +696,7 @@ supplementIndex.push(new Supplement({
 supplementIndex.push(new Supplement({
     name : "Li-Zyme Forte",
     link : "http://www.bioticsresearch.com/node/1532",
-    picture : "",
+    picture : "./images/supplements/LiZymeForte.png",
     description : "Li-Zyme Forte™ supplies the trace mineral lithium as a whole food, phytochemically bound vegetable culture source. It may be used where a higher concentration of lithium is indicated. Typical dietary intakes of lithium range from 200 to 600 mcg per day, however certain population groups consume levels that are significantly higher. While not considered an essential trace mineral, animal studies have documented detrimental effects of lithium deficiency. Each tablet supplies 150mcg of plant sourced lithium.",
     price: 29.98,
     symptoms: {

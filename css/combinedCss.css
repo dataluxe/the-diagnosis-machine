@@ -246,6 +246,7 @@ a {
     width: 50%;
     height: auto;
     margin: 26%; /*slightly odd image looks better with +1% margin*/
+    cursor: pointer;
 
 }
 

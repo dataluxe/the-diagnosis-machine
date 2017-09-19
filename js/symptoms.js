@@ -2,13 +2,17 @@
  * Created by Main on 9/4/2017.
  */
 
-    //Import CurrentUser
+    //Import CurrentUser. name, password must be populated, all other fields must be 'reset'
 
 currentUser = function(){
     if (localStorage.getItem("currentUser") === null) {
         window.alert("!!!CRITICAL - currentUser is null!\n\n'currentUser' should be populated, with a name and password intact upon entry to this page.\n\nInvestigate and repair!")
     } else {
-        return JSON.parse(localStorage.getItem("currentUser"));
+        var user = JSON.parse(localStorage.getItem("currentUser"));
+        user.selectedSymptoms = [];
+        user.returnedSupplements = [];
+        user.checkoutTotal = [];
+        return user;
     }
 }();
 
@@ -22,9 +26,14 @@ signOut = function() {
 
 symptomTileClick = function(e){
 
-    var stop = 0;
-
     var target = e.target;
+
+    if (target !== this) {
+        console.log("symptomTileClick 'this' check failed - (child clicked). Doing nothing and immediately exiting function.");
+        return;
+        //https://stackoverflow.com/questions/9183381/how-to-have-click-event-only-fire-on-parent-div-not-children
+    }
+
     var symptom = e.target.querySelector("div > b").innerText;
     var indexOf = currentUser.selectedSymptoms.indexOf(symptom);
     var proceedButton = document.getElementById("proceed-button");
@@ -86,8 +95,6 @@ calculateResults = function() {
 
     suppSuggestTemp.sort(function(a, b){return b[1]-a[1]}); //Sort results by effectsum, descending
     suppSuggestTemp = suppSuggestTemp.slice(0,3); //Take the top three entries
-
-    currentUser.returnedSupplements = [];
 
     for (i = 0; i < symptoms.length; i++) {
         currentUser.returnedSupplements.push(supplementIndex.find(function(e){return suppSuggestTemp[i][0] === e.name}));

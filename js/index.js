@@ -51,7 +51,7 @@ signUp = function() {
         userIndex.push(currentUser);
         localStorage.setItem("userIndex", JSON.stringify(userIndex));
         console.log("User Created, pushed to Array: " + currentUser.name + " | " + currentUser.password + "/n" +  userIndex);
-        //window.location="symptoms.html"
+        window.location="symptoms.html"
     }
 
     else {
@@ -89,8 +89,9 @@ signIn = function() {
 
     else if (regexPass && unCheck) {
         currentUser = unCheck;
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
         console.log("Existing user found, pulled from localStorage: " + currentUser.name + " | " + currentUser.password + " .");
-        //window.location="symptoms.html"
+        window.location="symptoms.html"
     }
 
     else {
