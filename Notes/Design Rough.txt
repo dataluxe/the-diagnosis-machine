@@ -1,3 +1,8 @@
+TO-DO: 2017-09-19
+> Last check for minor code, css issues / fixes.
+> Check Mandy's e-mail again.
+> Done.
+
 User selects X Symptoms
 Iterate through Supplement Array, summing value of targeted symptoms, creating a new temp 'results' array with the Supplement Name and the sum value.
 Order list by Sum Value

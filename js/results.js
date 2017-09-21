@@ -3,11 +3,19 @@
  */
 
 currentUser = function(){
-    if (localStorage.getItem("currentUser") === null) {
-        window.alert("!!!CRITICAL - currentUser is null!\n\n'currentUser' should be populated, with name, password, returnedSupplements, and checkoutTotal intact upon entry to this page.\n\nInvestigate and repair!")
+
+    var lsUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (lsUser === null) {
+        window.alert("!!!CRITICAL - currentUser is null!\n\n'currentUser' should be populated, with name, password, returnedSupplements, and checkoutTotal intact upon entry to this page.\n\nInvestigate and repair!");
+        window.location="index.html";
+    } else if ( lsUser.returnedSupplements.length != 3 ) {
+        window.alert("!!!CRITICAL - currentUses.returnedSupplement has incorrect number of elements!\n\n'currentUser' is malpopulated\n\nInvestigate and repair!");
+        window.location="index.html";
     } else {
-        return JSON.parse(localStorage.getItem("currentUser"));
+        return lsUser;
     }
+
 }();
 
 setHeader = function(){
@@ -46,5 +54,5 @@ window.addEventListener("load", function(){
     setHeader();
     document.getElementById("navbar-signout").addEventListener("click", signOut);
     printSupplementPanels();
-    document.getElementById("restart-img").addEventListener("click", retry);
+    document.getElementById("restart-button").addEventListener("click", retry);
 });

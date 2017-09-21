@@ -5,15 +5,22 @@
     //Import CurrentUser. name, password must be populated, all other fields must be 'reset'
 
 currentUser = function(){
-    if (localStorage.getItem("currentUser") === null) {
-        window.alert("!!!CRITICAL - currentUser is null!\n\n'currentUser' should be populated, with a name and password intact upon entry to this page.\n\nInvestigate and repair!")
+
+    var lsUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (lsUser === null) {
+        window.alert("!!!CRITICAL - currentUser is null!\n\n'currentUser' should be populated, with a name and password intact upon entry to this page.\n\nInvestigate and repair!");
+        window.location="index.html"
+    } else if (!lsUser.name || !lsUser.password){
+        window.alert("!!!CRITICAL - currentUser name or password is null or empty!\n\nName and password intact upon entry to this page.\n\nInvestigate and repair!");
+        window.location="index.html"
     } else {
-        var user = JSON.parse(localStorage.getItem("currentUser"));
-        user.selectedSymptoms = [];
-        user.returnedSupplements = [];
-        user.checkoutTotal = [];
-        return user;
+        lsUser.selectedSymptoms = [];
+        lsUser.returnedSupplements = [];
+        lsUser.checkoutTotal = [];
+        return lsUser;
     }
+
 }();
 
 setHeader = function(){
@@ -28,20 +35,18 @@ symptomTileClick = function(e){
 
     var target = e.target;
 
-    if (target !== this) {
+    if (target !== this) { //https://stackoverflow.com/questions/9183381/how-to-have-click-event-only-fire-on-parent-div-not-children
         console.log("symptomTileClick 'this' check failed - (child clicked). Doing nothing and immediately exiting function.");
         return;
-        //https://stackoverflow.com/questions/9183381/how-to-have-click-event-only-fire-on-parent-div-not-children
     }
 
     var symptom = e.target.querySelector("div > b").innerText;
     var indexOf = currentUser.selectedSymptoms.indexOf(symptom);
-    var proceedButton = document.getElementById("proceed-button");
+    var proceedButton = document.getElementById("proceed-button") ? document.getElementById("proceed-button") : document.getElementById("proceed-enabled");
 
     if (indexOf !== -1) { //...eliminate the entry if it already exists, remove style...
         currentUser.selectedSymptoms.splice(indexOf, 1);
-        target.style.borderColor = "#000000";
-        target.style.cursor = "pointer";
+        target.classList.remove("symptom-selected");
     } else if (indexOf === -1) { // ...if the entry is new....
 
         if (currentUser.selectedSymptoms.length === 3) //...leave if ss array is already full....
@@ -50,17 +55,14 @@ symptomTileClick = function(e){
         }
 
         currentUser.selectedSymptoms.push(symptom); //...add symptom to array and styles to cell if not.
-        target.style.borderColor = "#ff0066";
-        target.style.cursor = "normal";
+        target.classList.add("symptom-selected");
     }
 
     if (currentUser.selectedSymptoms.length < 3) {
-        proceedButton.style.backgroundColor = "#996600";
-        proceedButton.style.cursor = "normal";
+        proceedButton.id = "proceed-button";
         proceedButton.removeEventListener("click", calculateResults);// If less than three symptoms, disable 'Proceed' button.//
     } else if (currentUser.selectedSymptoms.length === 3) { // If three symptoms, do nothing...
-        proceedButton.style.backgroundColor = "#ffa500";
-        proceedButton.style.cursor = "pointer";
+        proceedButton.id = "proceed-enabled";
         proceedButton.addEventListener("click", calculateResults);
     } else {
         console.log("!!! CRITICAL: unhandled case in symptomTileClick proceed-button If block! Investigate and repair!")

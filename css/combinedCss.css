@@ -15,7 +15,7 @@ body {
  /* temporary shim... replace with footer scheme later */
 }
 
-a {
+a, .link {
     color: #EFEFEF;
     text-decoration: none;
     text-decoration-style: solid;
@@ -32,8 +32,19 @@ a {
     font-weight: bolder;
     margin: 4px;
 }
+
+.flavor-text-medium {
+    font-size: 119%;
+    font-weight: normal;
+    line-height: 150%;
+}
+
 .flavor-text-medium-small {
     font-size: 113%;
+    font-weight: lighter;
+}
+
+.flavor-text-small {
     font-weight: lighter;
 }
 
@@ -42,9 +53,7 @@ a {
     font-weight: 500;
     margin: 2px;
 }
-.flavor-text-small {
-    font-weight: lighter;
-}
+
 
 #footer {
     display: block;
@@ -77,7 +86,7 @@ a {
     text-align: left;
     vertical-align: middle;
 }
-#navbar-left-element > a {
+#navbar-left-element > a, b {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -104,7 +113,22 @@ a {
     padding-left: 15px;
 }
 
+.navbar-disabled {
+    color: #888888;
+    cursor: not-allowed;
+}
 
+#navbar-current-page {
+    font-size: 115%;
+    color: #FFFFCC;
+}
+#navbar-current-page:hover {
+    text-shadow: 1px 1px 2px white;
+}
+
+#navbar-signout:hover {
+    text-shadow: 1px 1px 2px white;
+}
 
 /*index.html styles here*/
 
@@ -172,7 +196,7 @@ a {
 
 .symptom-selected {
     border-color: #ff6600;
-
+    cursor: pointer;
 }
 
 #proceed-button {
@@ -181,13 +205,16 @@ a {
     vertical-align: middle;
 }
 
-.proceed-enabled {
+#proceed-enabled {
+    border-radius: 5px;
     background-color: #ffa500;
+    vertical-align: middle;
     cursor: pointer;
+    box-shadow: 0 0 8px #FFFFFF inset
 }
 
-.proceed-enabled :hover {
-    box-shadow: -3px -3px 3px #FFFFFF;
+#proceed-enabled:hover {
+    background-color: #ffc520;;
 }
 
 
@@ -204,7 +231,6 @@ a {
     width: 27%;
     height: fit-content;
     position: relative;
-    max-height: 840px;
     background-color: rgba(0, 0, 0, .3);
     border-radius: 9px;
 }
@@ -230,6 +256,7 @@ a {
     display: block;
     margin: 0 auto;
     border-radius: 12px;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,1);
 }
 
 #restart-button {
@@ -240,6 +267,10 @@ a {
     border-radius: 10px;
     border: 2px solid #000000;
     box-shadow: -3px -3px 3px #000000 inset;
+}
+
+#restart-button:hover {
+    box-shadow: 3px 3px 3px #000000 inset;
 }
 
 #restart-img {
@@ -265,7 +296,7 @@ a {
     height: 250px;
     border-radius: 9px;
     float: left;
-    margin: 0 40px 30px 0;
+    margin: 0 30px 20px 0;
 }
 
 #about-title {

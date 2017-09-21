@@ -5,6 +5,7 @@
     <title>About - The Diagnosis Machine</title>
     <link href="./css/normalize.css" rel="stylesheet" type="text/css">
     <link href="./css/combinedCss.css" rel="stylesheet" type="text/css">
+    <script src="./js/about.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,8 @@
                 <td id="navbar-left-element">
                     <a href="index.html">Home</a>
                     <a href="symptoms.html">Symptoms</a>
-                    <a href="about.html">About Us</a>
+                    <a href="results.html">Results</a>
+                    <a href="about.html" id="navbar-current-page">About Us</a>
                 </td>
 
                 <!--Center Elements-->
@@ -30,8 +32,8 @@
 
                 <!--Right-Aligned Elements-->
                 <td id="navbar-right-element">
-                    <b id="navbar-username">Username</b>
-                    <b id="navbar-signout">Sign Out</b>
+                    <b id="navbar-username">-</b>
+                    <b id="navbar-signout" title="Sign Out">Sign Out</b>
                 </td>
 
             </tr>
@@ -44,13 +46,21 @@
             <div id="friendly-about">
                 <p class="heading-big" id="about-title">About This Project</p>
                 <img src="./images/profile-picture.png"/>
-                <b class="flavor-text-medium-small">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas hendrerit augue, nec euismod erat tincidunt et. Cras quis porttitor augue, vel placerat est. Curabitur enim ligula, volutpat at fringilla ac, venenatis a justo. Nunc eleifend id leo vel tempus. Donec id diam malesuada, feugiat dolor ac, rhoncus turpis. Praesent et est dictum, lobortis tortor rhoncus, feugiat justo. In imperdiet, orci nec scelerisque fringilla, enim ligula imperdiet augue, et condimentum elit tellus vitae urna.
+                <p class="flavor-text-medium">
+                    My name is Phil Lawson. Since is was a child, I have suffered from Crohns' disease... or some close relative thereof, since no doctor could ever provide me with a straight answer as to what was wrong with my health.
 
-                    Praesent pellentesque nibh in auctor porta. Aenean ut ante pharetra nisi imperdiet pulvinar sit amet non lacus. Aliquam volutpat rhoncus purus, id fringilla augue pulvinar id. Pellentesque rutrum, elit nec elementum efficitur, risus dolor rutrum tellus, tincidunt consequat quam eros et lacus. Vivamus ac urna sit amet orci posuere mattis. Integer convallis eros massa, ac porttitor erat elementum tristique. Etiam venenatis semper dui, ut efficitur lectus vestibulum sed. Suspendisse accumsan tincidunt elit at mattis. Pellentesque vel sollicitudin elit, vitae convallis neque. Aliquam ligula sem, mattis eget turpis eget, aliquam posuere massa. Proin vehicula elit ante. Phasellus eu suscipit nisi, vel facilisis elit. Donec eleifend tellus quis dui iaculis iaculis.
+                    So, starting slowly at first in 2010, then all-out by 2013, I began searching high and low for the knowledge to determine 1) what made me feel so terrible all the time 2) what caused such a malfunction within me in the first place, and 3) how to fix it.
 
-                    Cras aliquam rutrum purus hendrerit pharetra. Sed ac urna luctus mauris consectetur ultricies quis ut sapien. Phasellus tincidunt sed massa eget luctus. Nunc ut placerat diam, et tempor enim. Phasellus non lacinia nunc. In hac habitasse platea dictumst. Sed in nisi varius, eleifend mauris sed, condimentum enim. In vel elementum purus. Proin sagittis est non vestibulum rhoncus. Quisque non purus nunc. Aliquam tempor ligula a orci tristique ullamcorper. Ut aliquam maximus lectus. Aenean vitae euismod eros. Pellentesque in pretium dui. Fusce posuere quis massa vitae blandit.
-                </b>
+                    Several months of navigating the dark alleyways of the Internet yielded an absolute <i>treasure trove</i> of knowledge on the internet, relating not just to my specific primary malady, but to all of my health-related maladies throughout life, those of my family and friends, and to multiple levels of function in the human physiology.
+
+                    With the help of one excellent physician, and of many of the supplements listed on this site, I have made a near-100% recovery, and still have a large backlog of projects which I steadily work through toward a vital, adamantine condition of health.
+
+                    This site executes a rough, simplified, automatic facsimile of my own method of diagnosis, selecting three supplements from some of my favorite brands to address the user's selected health maladies.
+                </p>
+                    <hr>
+                <p class="flavor-text-small">
+                    Note: This is a trivial site made specifically for the entrance exam to course 301 in Code Fellows academy in Seattle. If you somehow stumble across this site, understand that none of the information on it is medical advice. All images and assets are used in this project without permission, under (at least) U.S. Fair Use guidelines.
+                </p>
             </div>
 
             <!-- This div will be initially hidden - it can be toggled with a button to replace the 'Friendly' about with a disclaimer.

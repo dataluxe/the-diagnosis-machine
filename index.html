@@ -19,20 +19,21 @@
 
             <!--Left-Aligned Elements-->
             <td id="navbar-left-element">
-                <a href="index.html">Home</a>
-                <a href="symptoms.html">Symptoms</a>
+                <a href="index.html" id="navbar-current-page">Home</a>
+                <b class="link navbar-disabled">Symptoms</b>
+                <b class="link navbar-disabled">Results</b>
                 <a href="about.html">About Us</a>
             </td>
 
-            <!--Center Elements-->
+            <!--Centered Elements-->
             <td id="navbar-center-element">
                 <b id = "header-title-tile">The Diagnosis Machine</b>
             </td>
 
             <!--Right-Aligned Elements-->
             <td id="navbar-right-element">
-                <b id="navbar-username">Username</b>
-                <b id="navbar-signout">Sign Out</b>
+                <b id="navbar-username" class="navbar-disabled">-</b>
+                <b id="navbar-signout" class="navbar-disabled" title="Sign Out">Sign Out</b>
             </td>
 
         </tr>
@@ -64,7 +65,7 @@
                 </td>
                 <td class="sign-in-cell">
                     <b>Password</b>
-                    <input id="password-field" title="password" type="text">
+                    <input id="password-field" title="password" type="password">
                     <br><br>
                     <b>New Users</b>
                     <button id="sign-up-button">Sign Up</button>

@@ -21,19 +21,20 @@
             <!--Left-Aligned Elements-->
             <td id="navbar-left-element">
                 <a href="index.html">Home</a>
-                <a href="symptoms.html">Symptoms</a>
+                <a href="symptoms.html" id="navbar-current-page">Symptoms</a>
+                <b class="link navbar-disabled">Results</b>
                 <a href="about.html">About Us</a>
             </td>
 
-            <!--Center Elements-->
+            <!--Centered Elements-->
             <td id="navbar-center-element">
                 <b id = "header-title-tile">The Diagnosis Machine</b>
             </td>
 
             <!--Right-Aligned Elements-->
             <td id="navbar-right-element">
-                <b id="navbar-username">Username</b>
-                <b id="navbar-signout">Sign Out</b>
+                <b id="navbar-username"></b>
+                <b id="navbar-signout" title="Sign Out">Sign Out</b>
             </td>
 
         </tr>
@@ -66,7 +67,7 @@
                     <div><b class="heading-medium">Headaches</b></div>
                 </td>
 
-                <td id="proceed-button" rowspan="3">
+                <td id="proceed-button" title="Calculate Results!" rowspan="3">
                     <img src="./images/next-caret.png">
                 </td>
             </tr>
